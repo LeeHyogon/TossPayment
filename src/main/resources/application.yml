@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3307/payment_db
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: 199512
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+      show_sql: true #show sql
+  profiles:
+    include: API-KEY
+logging:
+  level:
+    org.hibernate:
+      type.descriptor.sql: trace #show parameter binding
+      SQL: DEBUG
+server:
+  port: 8080
+  error:
+    include-exception: true # 오류 응답에 exception의 내용을 포함할지 여부 include-stacktrace: always # 오류 응답에 stacktrace 내용을 포함할 지 여부
+    include-stacktrace: always # 오류 응답에 stacktrace 내용을 포함할 지 여부
