@@ -17,15 +17,16 @@ import java.util.UUID;
 @NoArgsConstructor
 public class PaymentReq {
 
-    @ApiModelProperty("지불방법")
+
+
     private PayType payType;
-    @ApiModelProperty("지불금액")
+
     private Long amount;
-    @ApiModelProperty("주문 상품 이름")
+
     private OrderNameType orderName;
-    @ApiModelProperty("구매자 이메일")
+
     private String customerEmail;
-    @ApiModelProperty("구매자 이름")
+
     private String customerName;
     public Payment toEntity() {
         return Payment.builder()
