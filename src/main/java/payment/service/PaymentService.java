@@ -61,8 +61,7 @@ public class PaymentService {
             throw new BussinessException(ExMessage.PAYMENT_ERROR_ORDER_PAY_TYPE);
         }
 
-        if (!orderName.equals(OrderNameType.STYLE_FEEDBACK.name()) &&
-                !orderName.equals(OrderNameType.CRDI_OR_PRODUCT_RECMD.name())) {
+        if (!orderName.equals(OrderNameType.PRODUCT_NAME1.name())) {
             throw new BussinessException(ExMessage.PAYMENT_ERROR_ORDER_NAME);
         }
 
