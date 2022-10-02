@@ -53,7 +53,7 @@ public class PaymentService {
         String payType=paymentReq.getPayType().name();
         String customerEmail=paymentReq.getCustomerEmail();
         String orderName=paymentReq.getOrderName().name();
-        if (amount == null || amount != 3000) {
+        if (amount == null || amount != 100) {
             throw new BussinessException(ExMessage.PAYMENT_ERROR_ORDER_PRICE);
         }
 
